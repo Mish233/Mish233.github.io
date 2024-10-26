@@ -1,0 +1,205 @@
+/*写给身体部的*/
+.Body_All{
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+/*头部区*/
+/*头部区-容器*/
+.Top_container{
+    position: relative;
+    display:flex;
+    width: 100%; 
+    margin:0;
+    padding:0;
+}
+/*到此为止*/
+/*头部区-背景*/
+.Top_background{
+    z-index: 1;
+    flex:1;
+    background-image:url(IMG/The_Fire_Deer.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    margin:0;
+    padding:0;
+    height:400px;
+    width: 100%;
+}
+/*到此为止*/
+/*头部区-侧栏相关*/
+.Top_leftside_item{
+    z-index: 2;
+    overflow: auto; 
+    position: absolute;
+    width:100vw;
+    padding:5px;
+    max-width: 200px;
+}
+
+.Top_leftside_item ul{
+    list-style-type: none; 
+    padding: 0;
+}
+
+.Top_leftside_item li{
+    float: left;
+}
+
+.Top_leftside_item a{
+    text-decoration: none; 
+    padding: 0px 5px;
+    color: black;
+}
+
+.Top_leftside_item a:hover{
+    background-color: white;
+}
+/*到此为止*/
+
+/*内容区*/
+/*内容区-容器*/
+.Body_container{
+    /*background-image:url("IMG/The_Fire_Deer.jpg");*/
+    /*上面那个是给未来可能的图片背景做准备*/
+    position: relative;
+    display:flex;
+    width: 100%;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+}
+/*到此为止*/
+/*左侧栏-头像信息*/
+.Body_leftside{
+    position: relative;
+    margin:10vw 5vw 5vw 10vw;
+    margin:50px 50px 50px 50px;
+    padding:10px;
+    text-align:center;
+    flex: 0 0 auto;
+}
+/*内容区-头像*/
+.Body_portrait{
+    position: relative;
+    flex: 1;
+}
+
+.Body_portrait img{
+    position: relative;
+    width:auto;
+    max-width:250px;
+    height:auto;
+    max-height:250px;
+    flex: 1;
+}
+/*到此为止*/
+/*内容区-图标指向链*/
+.Body_icon{
+    position: relative;
+}
+
+.Body_icon img{
+    height:auto;
+    max-height:50px;
+    width:auto;
+    max-width:50px;
+    margin:5px 5px 5px 5px;
+    flex: 1;
+}
+/*到此为止*/
+/*内容区-状态条*/
+.Body_side_item{
+    position:relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.Body_side_item ul{
+    list-style-type: none; 
+    padding: 0;
+}
+
+.Body_side_item li{
+    text-decoration: none;
+}
+
+.Body_side_item a{
+    text-decoration: none; 
+    padding: 25px 5px;
+    color: black;
+    display:block;
+}
+
+.Body_side_item a:hover{
+    background-color: rgb(215, 215, 255);
+}
+/*到此为止*/
+/*内容区-文章展示框架*/
+.Body_essay_framework{
+    position:relative;
+    display:flex;
+    margin:50px 50px 50px 50px;
+    max-width:1000px;
+    flex: 1;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+}
+/*到此为止*/
+/*内容区-文章条目框*/
+.Body_essay_entry_framework{
+    border-top-style:solid;
+    position:relative;
+    display: flex;
+    justify-content:flex-start;
+    margin:30px 20px 0px 20px;
+    padding-right:150px;
+    max-width:600px;
+    flex: 1;
+}
+/*到此为止*/
+/*内容区-图片*/
+.Body_essay_imgine{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Body_essay_imgine img{
+    height:auto;
+    max-height:300px;
+    width:auto;
+    max-width:500px;
+    margin:10px 5px 5px 5px;
+    border-top-style:solid;
+}
+/*到此为止*/
+/*内容区-文字链接*/
+.Body_essay_wordlink{
+    position:relative; 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+.Body_essay_wordlink a{
+    margin:150px 50px 150px 50px;
+    text-decoration: none;
+    color: rgb(0, 200, 255);
+    display:block;
+    font-size:40px;
+}
+.Body_essay_wordlink a:hover{
+    background-color: rgb(215, 215, 255);
+}
+/*到此为止*/
+/*尾部*/
+/*尾部文字*/
+.Foot_Text
+{
+    font-size: 10px;
+    text-align:center;
+    font-weight:lighter;
+}
+/*到此为止*/

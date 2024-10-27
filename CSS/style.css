@@ -189,11 +189,15 @@
 }
 /*到此为止*/
 /*尾部*/
+/*尾部容器*/
+.Foot_container{
+    min-width:1500px;
+}
+/*到此为止*/
 /*尾部文字*/
-.Foot_Text
-{
-    font-size: 10px;
+.Foot_Text{
     text-align:center;
     font-weight:lighter;
+    font-size: 10px;
 }
 /*到此为止*/

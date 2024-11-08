@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"> 
+<title>Mish233&#39;s Blog</title>
+<link rel="icon" type="image/jpg" href="">
+<meta name="keywards" content="Mish233,Blog">
+<meta name="author" content="Mish233">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="Body_container">
+    <div class="Top_container">
+        <!-- 头部 -->
+        <div class="Top_Background">
+    <img src="../../../../img/Top_background.jpg">
+</div>
+<!-- 引入-公共元素-头部区_背景式标题 -->
+<div class="Top_title">
+    <p>Mish233&#39;s Blog</p>
+</div>
+<!--<div>
+     头部区_导航栏 
+    </div> -->
+
+    </div>
+    <div class="Mid_container">
+        <!-- 中部 -->
+        <!-- 引入-公共元素-左侧栏（头像信息区） -->
+<div class="Body_portrait-framework">
+    <!-- 头像 -->
+    <div class="Body_portrait-img">
+    <img src="../../../../img/portrait.jpg">
+</div>
+    <!-- 图片导航（联系方式）栏 -->
+    <div class="Body_portrait_Img-Navigation-Bar">
+    
+        
+            <a target="_blank" rel="noopener" href="https://github.com/Mish233">
+            <img src="../../../../img/github.png">
+            </a>
+        
+            <a href="mailto:ffmg2165348339@gmail.com">
+            <img src="../../../../img/gmail.png">
+            </a>
+        
+    
+</div>
+    <!-- 标签分类-文字型 -->
+    <div class="Body_portrait_Textcatagory">
+    <ul class="Body_portrait_Textcatagory_list" itemprop="keywords"><li class="Body_portrait_Textcatagory_list_li"><a class="Body_portrait_Textcatagory_list_a" href="/tags/ACC/" rel="tag">ACC</a></li><li class="Body_portrait_Textcatagory_list_li"><a class="Body_portrait_Textcatagory_list_a" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li></ul>
+</div>
+
+</div>
+<!-- 引入-公共元素-主框架（文章区） -->
+<!-- 主要的工作量，咕咕咕 -->
+<div class="post">
+    <!-- 我定义其为文章内容区 -->
+    <div>
+    <!-- 文章_标题 -->
+    <h1>操作系统总纲</h1>
+    </div>
+    <div>
+    <!-- 文章_属性（副标题）（补充内容） -->
+    </div>
+    <div>
+    <!-- 文章_正文 -->
+    <h1 id="现代操作系统："><a href="#现代操作系统：" class="headerlink" title="现代操作系统："></a>现代操作系统：</h1><h2 id="操作系统，它扩展机器（硬件），管理资源（软件）"><a href="#操作系统，它扩展机器（硬件），管理资源（软件）" class="headerlink" title="操作系统，它扩展机器（硬件），管理资源（软件）"></a>操作系统，它<strong>扩展机器</strong>（硬件），<strong>管理资源</strong>（软件）</h2><p>首先我们介绍一下计算机的硬件：<br><strong>处理器</strong>（CPU），<strong>存储器</strong>（主存+磁盘+各类高速缓存存储器），<strong>磁盘</strong>（硬盘），<strong>I&#x2F;O设备</strong>，<strong>总线</strong></p>
+<h3 id="CPU：计算机的大脑，从内存取出指令并执行"><a href="#CPU：计算机的大脑，从内存取出指令并执行" class="headerlink" title="CPU：计算机的大脑，从内存取出指令并执行"></a><strong>CPU</strong>：<strong>计算机的大脑</strong>，从内存取出指令并执行</h3><p>构成：寄存器（数据+<strong>程序计数器</strong>+堆栈指针+<strong>程序状态字（PSW）</strong>）+<strong>处理单元</strong><br>使用<strong>流水线</strong>机制，超标量（多执行单元），多线程，<strong>多核</strong><br>部分内容在[[计算机组成原理]]</p>
+<h3 id="存储器：存放数据；访问时间与内存容量成反比"><a href="#存储器：存放数据；访问时间与内存容量成反比" class="headerlink" title="存储器：存放数据；访问时间与内存容量成反比"></a><strong>存储器</strong>：<strong>存放数据</strong>；<strong>访问时间</strong>与<strong>内存容量</strong>成<strong>反比</strong></h3><p>引入<strong>高速缓存</strong>思想的存储器（L1，L2）<br>主存通常是随机访问存储器（<strong>RAM</strong>），启动计算机的引导加载程序放置在只读存储器（ROM），因为<strong>ROM</strong>具有<strong>非易失性</strong>（断电不丢失数据）<br><strong>磁盘</strong>（硬盘）是存储器的一种，主要存放文件</p>
+<h3 id="I-O设备：设备控制器-设备本身"><a href="#I-O设备：设备控制器-设备本身" class="headerlink" title="I&#x2F;O设备：设备控制器+设备本身"></a><strong>I&#x2F;O设备</strong>：设备控制器+设备本身</h3><p>实现I&#x2F;O的方式：用户程序发起<strong>系统调用</strong>，占据CPU；<strong>设备驱动程序</strong>启动设备，完成<strong>发起中断</strong>；为I&#x2F;O专门分配一个直接存储器访问（<strong>DMA</strong>）芯片</p>
+<h3 id="操作系统的主要部分："><a href="#操作系统的主要部分：" class="headerlink" title="操作系统的主要部分："></a>操作系统的主要部分：</h3><p><strong>进程（和附属的线程），地址空间，文件，输入&#x2F;输出，保护，内壳（shell）</strong></p>
+<h3 id="进程："><a href="#进程：" class="headerlink" title="进程："></a>进程：</h3><p>本质上是一个<strong>运行</strong>的程序<br>进程的相关消息统一保存在一个数组结构的<strong>进程表</strong>里<br>进程间通信</p>
+<h3 id="地址空间："><a href="#地址空间：" class="headerlink" title="地址空间："></a>地址空间：</h3><p>与进程紧密相关，计算机的主存要用来<strong>保存进程</strong>，地址空间即是它的<strong>抽象</strong></p>
+<h3 id="文件："><a href="#文件：" class="headerlink" title="文件："></a>文件：</h3><p>字面意思。大多数操作系统支持<strong>目录</strong>概念（树状结构）<br>进程有一个工作目录，它要在工作目录里寻找保持运行的相关文件</p>
+<h3 id="shell："><a href="#shell：" class="headerlink" title="shell："></a>shell：</h3><p><strong>进行系统调用的代码</strong>。<strong>编辑器</strong>，<strong>编译器</strong>，<strong>汇编代码</strong>，<strong>链接程序</strong>，<strong>效用程序</strong>，<strong>命令解释行</strong>等<br><strong>系统调用</strong>是<strong>用户态</strong>和<strong>内核态</strong>连接的<strong>桥梁</strong>，进程管理，文件管理，目录管理</p>
+<h3 id="操作系统的结构："><a href="#操作系统的结构：" class="headerlink" title="操作系统的结构："></a>操作系统的结构：</h3><p>单体结构，层次式结构，微内核，客户端-服务端模式，虚拟机，外核<br>分类为：<br>大型机操作系统，服务器操作系统，多处理器操作系统，个人计算机操作系统，掌上计算机操作系统，嵌入式操作系统，传感器节点操作系统，实时操作系统，智能卡操作系统</p>
+<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><h3 id="进程：正在运行的程序的一种抽象，某种类型的活动。有程序，输入，输出，状态。"><a href="#进程：正在运行的程序的一种抽象，某种类型的活动。有程序，输入，输出，状态。" class="headerlink" title="进程：正在运行的程序的一种抽象，某种类型的活动。有程序，输入，输出，状态。"></a><strong>进程</strong>：<strong>正在运行</strong>的程序的一种抽象，某种类型的活动。有程序，输入，输出，<strong>状态</strong>。</h3><p>进程的<strong>创建</strong>：系统<strong>初始化</strong>，运行程序进行创建进程的<strong>系统调用</strong>，用户<strong>请求</strong>创建新进程，批处理作业<strong>初始化</strong><br>进程的<strong>终止</strong>：正常退出，出错退出，<strong>严重错误</strong>，其他进程杀死<br>进程<strong>状态</strong>：进程一个独立的实体，有<strong>自己</strong>的<strong>程序计数器</strong>和<strong>内部状态</strong><br>三种<strong>状态</strong>：<strong>运行态</strong>（占用CPU），<strong>就绪态</strong>（准备占用CPU），<strong>阻塞态</strong>（进程无法运行，除非发生事件）<br><strong>进程表</strong>（<strong>进程控制块</strong>）</p>
+<h3 id="线程：迷你的进程，分解应用程序的进程再生成多个并行运行的顺序线程（专业化思想）"><a href="#线程：迷你的进程，分解应用程序的进程再生成多个并行运行的顺序线程（专业化思想）" class="headerlink" title="线程：迷你的进程，分解应用程序的进程再生成多个并行运行的顺序线程（专业化思想）"></a><strong>线程</strong>：<strong>迷你</strong>的进程，<strong>分解应用程序的进程</strong>再生成多个<strong>并行运行</strong>的顺序线程（专业化思想）</h3><p>线程<strong>模型</strong>：进程允许有<strong>较大独立性</strong>的<strong>多个线程</strong>执行。多线程<strong>共享</strong>一个<strong>地址空间</strong>和<strong>其他资源</strong>。线程具有<strong>自己</strong>的<strong>堆栈</strong>，<strong>程序计数器</strong>，<strong>寄存器</strong>，<strong>状态</strong>。线程与线程是<strong>共享</strong>同一个<strong>进程</strong>的<strong>资源</strong>的，但相互线程之间自己的<strong>堆栈</strong>等自属性<strong>无法相互访问</strong><br>在用户界面实现线程：用户空间管理线程时，每个<strong>进程</strong>需要有其<strong>专用的线程表</strong>，<strong>追踪</strong>进程中的线程的自属性<br>在内核中实现线程：不再需要运行时系统，<strong>进程没有线程表</strong>，转移至<strong>内核</strong>内。创建线程进行<strong>系统调用</strong></p>
+<h3 id="进程间通信（IPC）：进程间相互交换信息，资源"><a href="#进程间通信（IPC）：进程间相互交换信息，资源" class="headerlink" title="进程间通信（IPC）：进程间相互交换信息，资源"></a><strong>进程间通信（IPC）</strong>：进程间相互交换<strong>信息</strong>，<strong>资源</strong></h3><p><strong>竞争条件</strong>：多个进程<strong>争夺</strong>一个信息和资源<br><strong>解决竞争条件</strong>：<strong>互斥</strong>。让我们对共享内存的内部设置一个<strong>临界区</strong>。两个进程<strong>不能同时处于临界区</strong>，临界区外进程<strong>不得堵塞</strong>其他进程，不能使进程<strong>无限等待进入临界区</strong><br>互斥<strong>方案</strong>：<strong>屏蔽中断</strong>，<strong>锁变量</strong>，<strong>严格轮换法</strong>，<strong>peterson解法</strong>，<strong>TSL指令（测试加锁）</strong><br>引入<strong>睡眠唤醒指令</strong>解决<strong>忙等待</strong>问题，但处理不好会引起<strong>生产-消费者问题（有界缓冲区问题）</strong><br>解决：<strong>信号量</strong>，<strong>互斥</strong>。<br><strong>管程</strong>：由<strong>过程</strong>，<strong>变量</strong>以及<strong>数据结构</strong>等组成的一个<strong>集合</strong>，组成<strong>软件包</strong>给进程访问。任一时刻<strong>只有一个进程</strong>能<strong>访问</strong>管程，管程是<strong>有效解决互斥问题的集合</strong><br>关于IPC，我们也有着一些比较<strong>经典的问题</strong>：<strong>哲学家就餐问题</strong>，<strong>读写者问题</strong>等</p>
+<h3 id="调度："><a href="#调度：" class="headerlink" title="调度："></a><strong>调度</strong>：</h3><p>操作系统是<strong>多道程序系统</strong>，这时会存在多个程序对应的进程<strong>争取</strong>单独（或多个）<strong>CPU</strong>。我们需要引入一系列的<strong>调度算法</strong>去规范进程以什么样的<strong>顺序</strong>去使用CPU<br><strong>调度算法</strong>：<strong>先来先服务算法（FIFO）</strong>，<strong>最短作业优先算法</strong>，<strong>最短剩余时间算法</strong>，<strong>轮转算法（时间片调度算法）</strong>，<strong>优先级调度算法</strong>，<strong>多级队列</strong>，<strong>最短进程优先算法</strong>，<strong>保证（均等）算法</strong>，<strong>彩票（随机抽取分配时间片）算法</strong>，<strong>（用户）公平分配算法</strong></p>
+<h2 id="内存管理："><a href="#内存管理：" class="headerlink" title="内存管理："></a>内存管理：</h2><h3 id="内存的概念"><a href="#内存的概念" class="headerlink" title="内存的概念"></a>内存的概念</h3><p><strong>物理地址</strong>对应着<strong>物理内存</strong>的<strong>空间位置</strong><br><strong>地址空间</strong>是我们<strong>进程占用存储器</strong>的一种抽象（模型），地址空间是进程用于<strong>寻址内存</strong>的一套<strong>地址</strong>的<strong>集合</strong>（空间），地址空间<strong>独立</strong>于其他的进程的地址空间<br>我们简单的使用<strong>动态重定位</strong>技术，将地址空间<strong>映射</strong>到物理内存的<strong>不同部分</strong><br>内存<strong>超载</strong>的处理方法：<strong>交换</strong>（<strong>运动</strong>进程调入<strong>内存</strong>，<strong>非活动</strong>进程调入<strong>磁盘</strong>）和<strong>虚拟内存</strong><br>内存<strong>使用情况</strong>的的<strong>直观观察</strong>：<strong>位图</strong>，<strong>链表</strong><br>创建新进程来<strong>分配内存</strong>的<strong>算法</strong>：<strong>首次适配（寻找空闲区塞入）</strong>，<strong>下次适配（在上一次塞入点开始继续找）</strong>，<strong>最佳适配（找出容纳进程最小的空闲区）</strong>，<strong>最差适配（找出容纳进程最大的空闲区）</strong></p>
+<h3 id="虚拟内存："><a href="#虚拟内存：" class="headerlink" title="虚拟内存："></a><strong>虚拟内存</strong>：</h3><p>我们的<strong>主存</strong>总是可能是<strong>不够用</strong>的了，为了适应程序日益增长自己大小的需要，我们引入虚拟内存来<strong>假象</strong>地<strong>扩大主存的空间</strong><br>程序自己的地址空间，将<strong>地址空间</strong>划分<strong>多块</strong>（称为<strong>页</strong>），某些页<strong>映射</strong>到物理内存，其他页<strong>放置</strong>在<strong>磁盘</strong>，由<strong>操作系统</strong>自动决定将一些<strong>未在物理内存的页</strong>进行<strong>映射</strong><br>程序产生<strong>虚拟地址</strong>，构建一个虚拟地址空间，送到<strong>内存管理单元（MMU）</strong>。虚拟空间构成的页，在物理内存<strong>对应</strong>的单元称为<strong>页框</strong>。通过<strong>页表</strong>作为<strong>虚拟地址和物理地址对应的索引</strong>，防止<strong>缺页中断</strong>。<br><strong>页表</strong>的<strong>构成</strong>：<strong>高速缓存禁止位</strong>+<strong>访问位</strong>+<strong>修改位</strong>+<strong>保护位</strong>+<strong>在&#x2F;不在位</strong>+<strong>页框号</strong><br><strong>大内存</strong>页表：<strong>多级页表</strong>，<strong>倒排页表</strong></p>
+<h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><p>在交换的途中，我们依旧需要一系列的<strong>算法</strong>在<strong>页面置换</strong>的过程中，以达到交换的好的效果<br><strong>算法</strong>：<strong>最近未使用页面置换算法（NRU）</strong>，<strong>先进先出页面交换算法（FIFO）</strong>，<strong>第二次机会算法，时钟页面置换算法</strong>，<strong>最近最少使用（LRU）页面置换算法</strong>，<strong>老化算法</strong>，<strong>工作集（一个进程正在使用的页面的集合）页面置换算法</strong>，<strong>工作集时钟页面置换算法</strong></p>
+<h3 id="分页系统设计"><a href="#分页系统设计" class="headerlink" title="分页系统设计"></a>分页系统<strong>设计</strong></h3><p><strong>局部</strong>分配和<strong>全局</strong>分配策略，内存<strong>负载控制</strong>，<strong>页面大小</strong>，<strong>共享页面</strong>以及解决方案的<strong>共享库DLL动态链接库</strong>（内存映射文件），<strong>分页守护进程</strong>（检查空闲页框）</p>
+<p><strong>分段</strong>：在机器内引入一个段的<strong>地址空间</strong>，<strong>动态</strong>变大变小，给程序和数据<strong>划分</strong>为<strong>逻辑独立</strong>的<strong>地址空间</strong>，有助于共享和保护</p>
+<h2 id="文件系统："><a href="#文件系统：" class="headerlink" title="文件系统："></a>文件系统：</h2><h3 id="文件的概念"><a href="#文件的概念" class="headerlink" title="文件的概念"></a>文件的概念</h3><p>文件是进程创建的<strong>信息逻辑单元</strong><br>文件特性：<strong>命名</strong>（名+文件扩展名），<strong>结构</strong>（字节序列，记录序列，树），<strong>类型</strong>，<strong>访问</strong>，<strong>属性</strong>，<strong>操作</strong><br>可执行文件<strong>结构</strong>：<strong>魔数</strong>+正文长度+数据长度+BSS长度+符号表长度+入口点+标志（头文件）+正文+数据+重定位位+符号表<br><strong>目录</strong>：提供目录或文件夹用于<strong>记录文件的位置</strong><br>根目录+层次目录结构，路径名（相对路径名，绝对路径名），目录操控</p>
+<h3 id="文件在硬件的实现"><a href="#文件在硬件的实现" class="headerlink" title="文件在硬件的实现"></a>文件在硬件的实现</h3><p>磁盘的<strong>0号扇区</strong>称为<strong>主引导记录</strong>（MBR），用来引导计算机。磁盘分区可能有引导块+超级块+空闲空间管理+i节点+根目录+文件和目录<br>文件在硬盘中如何<strong>实现</strong>：<strong>连续分配</strong>，<strong>链表分配</strong>，内存表进行链表分配（文件分配表（FAT）），i节点<br><strong>目录</strong>的<strong>实现</strong>：操作系统利用<strong>用户给出的路径名</strong>找到相应目录项。<br><strong>共享文件</strong>：几个用户要在同一目录工作，这时需要共享文件了</p>
+<h3 id="杂余"><a href="#杂余" class="headerlink" title="杂余"></a>杂余</h3><p><strong>日志结构文件系统</strong>（LFS）：写操作最初<strong>缓冲在内存</strong>，<strong>周期</strong>将所有已缓存的写作为一个<strong>单独段</strong>，在<strong>日志末尾</strong>写入磁盘（改进写入磁盘时间）<br><strong>虚拟文件</strong>系统：将多种文件系统统一成一个有序的结构。关键思想在于<strong>抽出所有文件系统共有的部分</strong>，将代码放在单独的一层<br>文件系统的管理和优化：<br>文件空间管理：<strong>块大小</strong>，<strong>记录空闲块</strong>，<strong>磁盘配额</strong><br>文件备份：<strong>逻辑转存</strong>（从一个或几个指定的目录开始，<strong>递归地转储</strong>其自给定基准日期后有所更改的全部文件和目录<br>文件一致性<br>文件系统性能：<strong>高速缓存</strong>+<strong>块提前读</strong>+<strong>减少磁盘臂运动</strong><br>磁盘碎片整理</p>
+<h2 id="I-O："><a href="#I-O：" class="headerlink" title="I&#x2F;O："></a>I&#x2F;O：</h2><p>I&#x2F;O需要讨论在硬件上的和软件上的</p>
+<h3 id="I-O硬件："><a href="#I-O硬件：" class="headerlink" title="I&#x2F;O硬件："></a>I&#x2F;O硬件：</h3><p>块设备和字符设备，一般由电子设备：设备控制器或适配器，和机械部件构成。可以间接的与CPU进行通信也可以使用直接存储器存取（DMA）<br>I&#x2F;O设备发出中断的原因：设备完成工作，中断控制器发出中断，CPU响应中断<br>精确中断和非精确中断<br>精确中断四大特性：PC（程序计数器）保存在一个已知的地方，PC所指向的指令之前的所有指令已经完全执行，PC所指向的指令之后的指令没有执行，PC所指向的指令是已知的<br>不满足这些要求的中断属于非精确中断</p>
+<h3 id="I-O软件："><a href="#I-O软件：" class="headerlink" title="I&#x2F;O软件："></a>I&#x2F;O软件：</h3><p>设备独立性，统一命名，错误处理。问题：错误处理，同步和异步，缓冲。程序控制I&#x2F;O，最简单的形式，让CPU做全部工作<br>I&#x2F;O软件层次：用户级I&#x2F;O软件（产生I&#x2F;O请求）+设备无关的操作系统软件（命名，保护，分块，缓冲）+设备驱动程序（设置设备寄存器，检查状态）+中断处理程序（I&#x2F;O完成时唤醒驱动程序）（+硬件（执行I&#x2F;O操作））</p>
+<h3 id="具体I-O设备："><a href="#具体I-O设备：" class="headerlink" title="具体I&#x2F;O设备："></a>具体I&#x2F;O设备：</h3><p>盘，鼠标键盘和监视器，时钟<br>磁盘臂调度算法：考虑因素（寻道时间，旋转延迟，实际数据传输时间）：先来先服务（FCFS），最短寻道优先（SSF），电梯算法（先考虑一个方向的请求再掉头处理另一个方向的请求）<br>时钟（定时器）：维护时间，防止进程垄断CPU<br>电源：笔记本电脑各部件的功率消耗：显示器（39%），CPU（18%），硬盘（12%），调制解调器（6%），声卡（2%），内存（1%），其他（22%）</p>
+<h2 id="死锁："><a href="#死锁：" class="headerlink" title="死锁："></a>死锁：</h2><h3 id="死锁问题及其解决方案"><a href="#死锁问题及其解决方案" class="headerlink" title="死锁问题及其解决方案"></a>死锁问题及其解决方案</h3><p>进程通信问题，两个进程争夺一个双方需要的资源，但产生了无限循环请求的错误而使两个进程阻塞<br>死锁条件：互斥条件+占有和等待条件+不可抢占条件+环路等待条件<br>解决死锁：鸵鸟（自欺欺人）算法。但我们有更好的：死锁检测和死锁恢复；死锁检测算法。通过抢占，回滚，杀死进程恢复<br>避免死锁：银行家算法（银行家向小镇的一群客户承诺一定贷款，他判断客户需要的贷款是否会导致自己破产，是则不分配，否则分配）<br>预防死锁：破坏死锁条件任一个<br>其他问题：两阶段加锁，通信死锁，活锁，饥饿</p>
+<h2 id="虚拟化，云技术："><a href="#虚拟化，云技术：" class="headerlink" title="虚拟化，云技术："></a>虚拟化，云技术：</h2><h3 id="虚拟机和云服务器"><a href="#虚拟机和云服务器" class="headerlink" title="虚拟机和云服务器"></a>虚拟机和云服务器</h3><p>虚拟化必要的条件：安全性，保真性，高效性<br>两类虚拟机管理程序：第一类虚拟机管理程序运行在裸机（硬件）上，第二类依赖宿主操作系统的系统服务<br>进行虚拟化也需要对CPU，内存，I&#x2F;O进行虚拟化，这意味着我们可能需要划分一定的虚拟化空间<br>云：<br>云的五条基本特征：按需自助服务，普适网络访问，资源池，快速可伸缩，服务可计量<br>云的功能是为一个用户提供一个可直接访问并任意使用的虚拟机</p>
+<h2 id="多处理机系统："><a href="#多处理机系统：" class="headerlink" title="多处理机系统："></a>多处理机系统：</h2><p>多处理机，两个或多个CPU全部共享访问一个公用的RAM。</p>
+<h3 id="多处理机的硬件："><a href="#多处理机的硬件：" class="headerlink" title="多处理机的硬件："></a>多处理机的硬件：</h3><p>基于总线的UMA（统一存储器访问）多处理机体系结构，使用交叉开关的UMA多处理机，使用多级交换网络的UMA多处理机，NUMA（非一致存储器访问）多处理机<br>摩尔定律：芯片技术的发展，晶体管的体积越来越小，越来越多的晶体管能放入一个芯片中<br>CPU通常称为核，放在同一个芯片中<br>于是，多核（大于一）芯片，众核（几十几百以上）芯片渐渐出世</p>
+<h3 id="多处理机操作系统："><a href="#多处理机操作系统：" class="headerlink" title="多处理机操作系统："></a>多处理机操作系统：</h3><p>每个CPU有自己的操作系统，主从（阶级）多处理机，对称多处理机（SMP）<br>多处理机的同步与调度<br>多计算机，紧耦合CPU，不共享存储器。每个计算机有自己的存储器。云计算服务建立在多计算机上</p>
+<h3 id="多计算机硬件："><a href="#多计算机硬件：" class="headerlink" title="多计算机硬件："></a>多计算机硬件：</h3><p>CPU，存储器，网络接口（API），有时有硬盘。通常没有显示器，图像适配卡，键盘鼠标。需要用户工作站进行操作。通过互连技术，网络接口进行组织<br>分布式系统，类似于多计算机，不过分布式系统的节点都是一台完整的计算机，且结点分散在世界各地，操作系统不需要统一。传统网络连接<br>分布式系统在操作系统顶端增加了一个中间件软件，提供一系列数据结构和操作，允许在散布的机器的进程和用户用一致的方式互操作<br>网络硬件：以太网，因特网。网络服务与协议<br>中间件：文档，文件系统，对象，协作</p>
+<h2 id="安全："><a href="#安全：" class="headerlink" title="安全："></a>安全：</h2><h3 id="计算机安全"><a href="#计算机安全" class="headerlink" title="计算机安全"></a>计算机安全</h3><p>安全表示计算机所有相关的基本问题，防护表示操作系统确保计算机信息安全。<br>安全性：机密性，完整性，可用性。三类定义显然不够用，需要人们自发扩展<br>威胁：黑客，僵尸（机器人）网络攻击<br>保护机制：保护域（限制读写，执行），控制访问，权能字<br>安全机制：多级安全（权限域中域），隐蔽信道（“纠错码”引导信息协助解读）</p>
+<h3 id="密码学："><a href="#密码学：" class="headerlink" title="密码学："></a>密码学：</h3><p>将明文通过某种手段转换为密文，需要密钥引导将密文信息通过有密钥者的理解进行解读<br>公钥与私钥：私密钥匙仅有持有人掌握，公钥的本身是加密的，而私钥能解开公钥的加密。要么纯粹地使用私钥，要么公钥公开且私钥个人掌握，用公钥解开密码的加密（但私钥不能解开密码的加密）</p>
+<h3 id="计算机安全的实践"><a href="#计算机安全的实践" class="headerlink" title="计算机安全的实践"></a>计算机安全的实践</h3><p>单向函数，数字签名，可信平台模块<br>认证：密码认证，物理认证（信用卡），生物特征认证<br>值得关注的程序漏洞：缓冲区溢出，格式化字符串，悬垂指针，空指针间接引用，整数溢出，命令注入，检查时间&#x2F;使用时间（竞争条件）<br>内部攻击：逻辑“炸弹”，“后门”陷阱，登录欺骗<br>恶意软件：特洛伊木马（软件藏毒），病毒（植入其他程序进行自我繁殖），蠕虫（引导程序先发建立攻击者的连接，将攻击代码导入被攻击方），间谍软件（点名360流氓软件）（劫持浏览器，修改注册表，关闭防火墙，卸载程序基本不可用）<br>防御：防火墙，反病毒程序，代码签名（验正），囚禁</p>
+
+    </div>
+</div>
+    </div>
+    <div class="Foot_container">
+        <!-- 尾部 -->
+        <!-- 引入-公共元素-尾部声明 -->
+<div class="Foot_Text">
+    <p>
+        Copyright©Mish233| 2024 |Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a>
+    </p>
+    <p>
+
+    </p>
+</div>
+
+    </div>
+</body>
+</html>

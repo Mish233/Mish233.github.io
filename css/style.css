@@ -48,6 +48,17 @@
     border-style:inset;
     width:70%;
 }
+.post_title{
+    text-align:center;
+}
+.post_subtitle{
+    text-align:center;
+    font-size:0.5em;
+    font-weight:lighter;
+}
+.post_content{
+    text-align:left;
+}
 .page{
     display:flex;
     flex-direction:column;

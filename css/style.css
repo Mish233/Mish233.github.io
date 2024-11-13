@@ -31,6 +31,14 @@
     text-decoration: none;
     font-size:1.5em;
 }
+.index_paginator a{
+    background-color:lightgrey;
+    margin:1px;
+}
+.index_paginator span{
+    background-color:lightgrey;
+    margin:1px;
+}
 .page-number.current{
     text-decoration: none;
 }

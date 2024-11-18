@@ -11,5 +11,6 @@ function Time(){
     var S = D.getSeconds();
     M = checkTime(M);
     S = checkTime(S);
-    document.getElementById("Now_Time").innerHTML=H+":"+M+":"+S;
+    document.getElementById("Current_Time").innerHTML=H+":"+M+":"+S;
 }
+setInterval(Time, 1000);

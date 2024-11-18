@@ -13,6 +13,7 @@
 }
 .index_linktitle{
     text-align: center;
+    border-radius: 10%;
     padding:5%;
 }
 .index_linktitle:hover{
@@ -25,18 +26,18 @@
 }
 .index_paginator{
     position:relative;
-    background-color:grey;
-    letter-spacing:0.25em;
     text-align:center;
+
     text-decoration: none;
-    font-size:1.5em;
 }
 .index_paginator a{
     background-color:lightgrey;
+    border-radius:50%;
     margin:1px;
 }
 .index_paginator span{
     background-color:lightgrey;
+    border-radius:50%;
     margin:1px;
 }
 .page-number.current{
@@ -99,7 +100,7 @@
 .Top_Background img{
     position:relative;
     z-index:-1;
-    max-height:25vh;
+    max-height:50vh;
     min-width:100%;
 }
 .Top_title{
@@ -111,6 +112,29 @@
     color:grey;
     font-weight:bold;
     font-size:3em;
+}
+.Top_Navigator{
+    position:relative;
+    display:flex;
+    background-color:grey;
+    width:100%;
+}
+.Top_Navigator ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction:row;
+    margin:0;
+    padding:0;
+}
+.Top_Navigator li{
+    justify-content: flex-start;
+    align-items: stretch;
+    margin:0px 5px 0px 0px;
+    height:100%;
+    background-color:white;
+}
+.Top_Navigator a{
+    text-decoration:none;
 }
 /* 中部区 */
 .Mid_container{

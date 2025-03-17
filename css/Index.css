@@ -1,0 +1,42 @@
+.index{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    background-color:Lavender;
+    border-style:inset;
+    width:70%;
+
+}
+.index_img{
+    float:left;
+}
+.index_linktitle{
+    text-align: center;
+    border-radius: 10%;
+    padding:5%;
+    cursor: pointer;
+}
+.index_linktitle:hover{
+    background-color:dodgerblue;
+}
+.index_linktitle a{
+    text-decoration: none;
+    font-size:2em;
+    
+}
+.index_paginator{
+    position:relative;
+    text-align:center;
+
+    text-decoration: none;
+}
+.index_paginator a{
+    font-size:25px;
+    border-radius:50%;
+    margin:1px;
+}
+.index_paginator span{
+    font-size:25px;
+    border-radius:50%;
+    margin:1px;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+<title>Mish233&#39;s Blog</title>
+<link rel="icon" type="image/jpg" href="">
+<meta name="keywards" content="Mish233,Blog">
+<meta name="author" content="Mish233">
+
+<link rel="stylesheet" href="/css/Style.css">
+
+
+<link rel="stylesheet" href="/css/Index.css">
+
+
+<link rel="stylesheet" href="/css/Page.css">
+
+
+<link rel="stylesheet" href="/css/Post.css">
+
+
+<script src="/js/JSLoader.js"></script>
+
+
+<script src="/js/Current_Time.js"></script>
+
+
+<script src="/js/HoverLink.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="Body_container" onload="ScriptLoader()">
+    <div class="Top_container">
+        <!-- 头部 -->
+        <!-- 引入-公共元素-头部区_引导栏 -->
+<div class="Top_Navigator">
+    <ul>
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/About/About.html">About</a></li>
+        
+            <li><a href="/Link/Link.html">Link</a></li>
+         
+    </ul>
+</div>
+<!-- 引入-公共元素-头部区_背景 -->
+<div class="Top_Background">
+    <img src="../../../../img/Top_background.jpg">
+</div>
+<!-- 引入-公共元素-头部区_背景式标题 -->
+<div class="Top_Title">
+    <p>Mish233&#39;s Blog</p>
+</div>
+
+
+    </div>
+
+    <div class="Mid_container">
+        <!-- 中部 -->
+        <!-- 引入-公共元素-左侧栏（头像信息区） -->
+<div class="Body_PortraitFramework">
+    <!-- 头像 -->
+    <div class="Body_Portrait_Img">
+    <img src="../../../../img/portrait.jpg">
+</div>
+    <!-- 图片导航（联系方式）栏 -->
+    <div class="Body_Portrait_ImgNavigator">
+    
+        
+            <a target="_blank" rel="noopener" href="https://github.com/Mish233">
+            <img src="../../../../img/github.png">
+            </a>
+        
+            <a href="mailto:ffmg2165348339@gmail.com">
+            <img src="../../../../img/gmail.png">
+            </a>
+        
+    
+</div>
+    <!-- 标签分类-文字型 -->
+    <div class="Body_Portrait_TagsNavigator">
+    <ul class="Body_Portrait_TagsNavigator_list" itemprop="keywords"><li class="Body_Portrait_TagsNavigator_list_li"><a class="Body_Portrait_TagsNavigator_list_a" href="/tags/Git/" rel="tag">Git</a></li><li class="Body_Portrait_TagsNavigator_list_li"><a class="Body_Portrait_TagsNavigator_list_a" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A8%80%E8%AE%BA/" rel="tag">个人言论</a></li><li class="Body_Portrait_TagsNavigator_list_li"><a class="Body_Portrait_TagsNavigator_list_a" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a></li><li class="Body_Portrait_TagsNavigator_list_li"><a class="Body_Portrait_TagsNavigator_list_a" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+</div>
+
+</div>
+<!-- 引入-公共元素-主框架（文章区） -->
+<!-- 主要的工作量，咕咕咕 -->
+<div class="post">
+    <!-- 我定义其为文章内容区 -->
+    <div class="post_title">
+    <!-- 文章_标题 -->
+    <h1>ProGit-基础</h1>
+    </div>
+    <div class="post_subtitle">
+    <!-- 文章_属性（副标题）（补充内容） -->
+    <a>2025年02月12日</a>
+    </div>
+    <div class="post_content">
+    <!-- 文章_正文 -->
+    <a><h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="获取Git仓库"><a href="#获取Git仓库" class="headerlink" title="获取Git仓库"></a>获取Git仓库</h3><p>两种方式获取Git项目仓库的方式：</p>
+<ol>
+<li>将尚未进行版本控制的本地目录转化为Git仓库</li>
+<li>将其他电脑（服务器）的Git仓库克隆到你的本地电脑</li>
+</ol>
+<h4 id="已存在目录中初始化仓库"><a href="#已存在目录中初始化仓库" class="headerlink" title="已存在目录中初始化仓库"></a>已存在目录中初始化仓库</h4><p>很简单——进入到你的目标文件夹，对应到终端则是<code>$ cd SomeFile/Your/Want</code>。之后执行以下指令（不过一般情况下你也可以在文件管理系统点到目标文件夹，然后“在这个文件夹启动终端”（我知道可能有部分OS不允许））：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git init</span></span><br></pre></td></tr></table></figure>
+
+<p>之后，这个目标文件夹被视为“Git仓库”。具体表现为隐藏文件出现了一个.git文件夹（及其.git的相关文件（标记））。这也是我们配置完用户信息，使用Git的第一步</p>
+<h4 id="克隆现有仓库"><a href="#克隆现有仓库" class="headerlink" title="克隆现有仓库"></a>克隆现有仓库</h4><p>先在本地电脑玩玩Git再考虑这个选项吧，如果你想获得对方的Git仓库并且协同参与开发，你需要输入指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> &lt;url&gt; &lt;File<span class="string">&#x27;s New Name&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>最后的<code>&lt;File&#39;s New Name&gt;</code>可填可不填，不填默认对方仓库的名字</p>
+<h3 id="更新到仓库"><a href="#更新到仓库" class="headerlink" title="更新到仓库"></a>更新到仓库</h3><p>现在我们机器上有了一个真实项目的Git仓库，并在这个仓库中检出了所有文件的工作副本。每当完成一个阶段的目标，将其记录，就需要将它提交到仓库</p>
+<p>工作目录下每一个文件就两种状态：已跟踪或未跟踪。已跟踪的文件是指那些被纳入版本控制的文件，即Git已经纳入管理（文件夹）范围内的文件；而未跟踪文件，假设说你的某些文件属于是那种Git之后产生的，并且你之后再也没有提交过（没有自动更新文件状态）。简单来讲，不存在快照记录，也不存在于暂存区——它根本不属于Git仓库里的文件</p>
+<h4 id="检查文件状态"><a href="#检查文件状态" class="headerlink" title="检查文件状态"></a>检查文件状态</h4><p>可以用下列指令查看文件处于什么状态：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="跟踪新文件"><a href="#跟踪新文件" class="headerlink" title="跟踪新文件"></a>跟踪新文件</h4><p>可以用下列指令跟踪一个你全新创造但没有纳入Git仓库体系的新文件（Git不会在你创造一个新文件时自动标记上去，因为Git不会自动判断你的那个文件到底是啥）：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git add &lt;NewFile&gt;</span></span><br></pre></td></tr></table></figure>
+<p>现在你的这个文件被归类到暂存区内了</p>
+<h4 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h4><p>我们总有些文件（因为个人需要）无需纳入Git的管理。我们可以创建一个名为<code>gitignore</code>的文件，列出要忽略的文件的模式。来看一个实际的 <code>.gitignore</code> 例子：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> .gitignore</span></span><br><span class="line">*.[oa]</span><br><span class="line">*~</span><br></pre></td></tr></table></figure>
+
+<p>第一行告诉 Git 忽略所有以 <code>.o</code> 或 <code>.a</code> 结尾的文件。一般这类对象文件和存档文件都是编译过程中出现的。 第二行告诉 Git 忽略所有名字以波浪符（~）结尾的文件，许多文本编辑软件（比如 Emacs）都用这样的文件名保存副本。 此外，你可能还需要忽略 log，tmp 或者 pid 目录，以及自动生成的文档等等。 要养成一开始就为你的新仓库设置好 .gitignore 文件的习惯，以免将来误提交这类无用的文件</p>
+<h4 id="查看已暂存和未暂存的修改"><a href="#查看已暂存和未暂存的修改" class="headerlink" title="查看已暂存和未暂存的修改"></a>查看已暂存和未暂存的修改</h4><p>如果你觉得<code>$ git status</code>输出的过于简略，你可以尝试下面的:</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git diff</span> </span><br></pre></td></tr></table></figure>
+<p>此命令比较的是工作目录中当前文件和暂存区快照之间的差异。也就是修改之后还没有暂存文件与最后一次提交的文件差异</p>
+<h4 id="提交更新"><a href="#提交更新" class="headerlink" title="提交更新"></a>提交更新</h4><p>一切工作准备完毕，将你的暂存区文件提交更新吧：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit</span></span><br></pre></td></tr></table></figure>
+<p>好的，你的文件更新完成了。</p>
+<p>有些时候你想跳过暂存区（也就是省<code>git add</code>的功夫），你可以考虑加个参数，这时Git自动把所有已经跟踪过的文件暂存起来一并提交：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit -a</span></span><br></pre></td></tr></table></figure>
+<p>小心，这个选项会将不需要的文件添加到提交中</p>
+<h4 id="移除文件"><a href="#移除文件" class="headerlink" title="移除文件"></a>移除文件</h4><p>要从Git中移除某个文件，就必须要从已跟踪文件清单中移除（确切来讲是在暂存区内的移除。如果你的这个文件有提交，提交区会留一份备份文件）。以下是指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">rm</span> &lt;File&gt;</span></span><br></pre></td></tr></table></figure>
+<p>下一次提交时，该文件不会被纳入版本管理了。</p>
+<p>如果你想删除之前修改过的或已经放到暂存区的文件，必须使用<code>-f</code>参数（Force）。就像这样的：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">rm</span> -f &lt;File&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样的数据不会被Git恢复了</p>
+<p>上述操作基于“这个文件我不想要了，删了吧”的思考。如果你想要“取消跟踪，保留文件”，你需要使用参数<code>-cached</code>。指令如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">rm</span> -cached &lt;File&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="移动文件"><a href="#移动文件" class="headerlink" title="移动文件"></a>移动文件</h4><p>Git不显式跟踪文件移动操作，如果你的某文件移动了（改名除外，Git会自动处理，不过改名的情况也基本等同于文件移动（走）了），Git会为这个跟踪文件上报“丢失”情况</p>
+<p>如果说你的某个标记文件，有另一个未跟踪不同名字，但是子文件几乎一样的文件替代了它，可以使用下列指令处理：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">mv</span> OldFile from NewFile</span></span><br></pre></td></tr></table></figure>
+<p>不过一般来说，如果只是简单的改名，Git自己会判断。这个指令只是个补充</p>
+<h3 id="查看Git提交记录"><a href="#查看Git提交记录" class="headerlink" title="查看Git提交记录"></a>查看Git提交记录</h3><p>你想回顾提交记录？简单——使用下列指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">log</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h3><p>有时候我们提交完之后发现漏掉几个文件没有添加，或者提交信息写错了。此时，可以运行带参数 <code>--amend</code>的提交指令“撤回原提交“</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git commit --amend</span></span><br></pre></td></tr></table></figure>
+<p>这个指令会将暂存区（备份）文件提交，假设说你自上次以来还没有进行过一次修改，那么快照会保持不变</p>
+<h4 id="取消暂存的文件"><a href="#取消暂存的文件" class="headerlink" title="取消暂存的文件"></a>取消暂存的文件</h4><p>使用以下指令取消暂存：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git reset HEAD &lt;File&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>记住，在Git中任何已提交的东西几乎总是可以恢复的。甚至那些被删除的分支的提交或使用<code>--amend</code>选项覆盖的提交也可以恢复</p>
+<h3 id="远程仓库的使用"><a href="#远程仓库的使用" class="headerlink" title="远程仓库的使用"></a>远程仓库的使用</h3><p>远程仓库是指托管在因特网或其他网络中你的项目的版本库（也就是你远端的本地仓库，但是你需要借助因特网介质进行访问）</p>
+<h4 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h4><p>如果你想查看你已经配置的远程仓库服务器（电脑），可以使用<code>git remote</code>指令。它会列出你指定的每一个远程仓库服务器的简写。如果你已经克隆了自己的仓库，那么至少应该能看到origin——Git给你克隆的仓库服务器的默认名字</p>
+<p>你也可以使用参数<code>-v</code>，会显示需要读写远程仓库使用的Git保存的简写与其对应的URL</p>
+<h4 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h4><p>回到前文，使用<code>git clone</code>指令默认会给你添加一个（对方或你自己的）远程仓库，Git对待Clone更像是”订阅“</p>
+<p>如何自己来添加它呢？输入指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git remote add &lt;shortname&gt; &lt;url&gt;</span></span><br></pre></td></tr></table></figure>
+<p>简写是这个远程仓库“简易”记忆的“名字”（不过我们可以直接理解为这个远程仓库的名字就行了）</p>
+<h4 id="从远程仓库抓取与拉取"><a href="#从远程仓库抓取与拉取" class="headerlink" title="从远程仓库抓取与拉取"></a>从远程仓库抓取与拉取</h4><p>从远程仓库中获得数据，可以执行：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git fetch &lt;remote&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个指令会访问远程仓库，从中拉取所有你还没有的数据。执行完成后你也会同时拥有远程仓库中的所有分支引用，可以随时合并或查看</p>
+<p>如果你使用<code>clone</code>指令克隆了一个仓库，指令自动将其添加为远程仓库（你订阅了对方（相对的，也可能这个对方是你自己，不过结果而言，是另一台电脑）并默认以“Origin“为简写</p>
+<p>如果你的当前分支设置了跟踪远程分支，那么可以用<code>git pull</code>指令来自动抓取后会合并该远程分支到当前分支。这个指令的主要用处是：如果你认为对方某些分支是自己的“主分支”，这个指令可以尝试自动合并你Clone来的仓库的分支（就比如说，你一个大文件有十几个发行分支，对应不同的工作人员，你几乎不会关注除了你工作的那个子分支之外的分支）</p>
+<h4 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h4><p>当你想分享你的项目时，必须将其推送到上游。指令很简单：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git push &lt;remote&gt; &lt;branch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>只有当你有所克隆的写入权限，并且没有人推送过时，这条指令才能生效</p>
+<h4 id="查看某个远程仓库"><a href="#查看某个远程仓库" class="headerlink" title="查看某个远程仓库"></a>查看某个远程仓库</h4><p>如果想要查看某一个远程仓库的更多信息，可以使用<code>git remote show &lt;remote&gt;</code>指令</p>
+<h4 id="远程仓库的重命名和移除"><a href="#远程仓库的重命名和移除" class="headerlink" title="远程仓库的重命名和移除"></a>远程仓库的重命名和移除</h4><p>你可以运行以下指令来修改一个仓库的简写名：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git remote rename &lt;Oldname&gt; &lt;Newname&gt;</span></span><br></pre></td></tr></table></figure>
+<p>值得注意的是这同样会修改你所有远程跟踪的分支名字</p>
+<p>又或者，你的一个远程仓库不需要了，使用如下指令删掉你的远程仓库：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git remote remove &lt;Filename&gt;</span></span><br></pre></td></tr></table></figure>
+<p>一旦你使用这种方式删除了一个远程仓库，那么所有和这个远程仓库相关的远程跟踪部分以及配置信息也会一并删除</p>
+<h3 id="打标签（Tag）"><a href="#打标签（Tag）" class="headerlink" title="打标签（Tag）"></a>打标签（Tag）</h3><p>你可以给仓库历史的某一个提交打上标签（比如说这个版本允许扩展发行，或者说如果你的哪个版本走上死路，可以从这个标签版本走另一条路）</p>
+<h4 id="列出标签"><a href="#列出标签" class="headerlink" title="列出标签"></a>列出标签</h4><p>很简单：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git tag</span></span><br></pre></td></tr></table></figure>
+<p>以字母顺序列出标签</p>
+<p>如果你想作筛选，可以使用<code>-l</code>或<code>-list</code>。以下是其中用法：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git tag -l <span class="string">&quot;&lt;Some words&gt;&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h4><p>Git支持两种标签：轻量标签和附注标签</p>
+<p>轻量标签很像是一个不会改变的分支——它只是某个特定提交的引用</p>
+<p>而附注标签是存储在Git数据库中的一个完整对象，它们是可以被校验的，其中包含打标签者的名字，电子邮件地址，日期时间，此外还有一个标签信息，并且可以使用GPG签名并验证</p>
+<h4 id="附注标签"><a href="#附注标签" class="headerlink" title="附注标签"></a>附注标签</h4><p>最简单的创建方式：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git tag -a &lt;Tag&gt; -m <span class="string">&quot;&lt;Message&gt;&quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>值得一提的是，<code>-m</code>参数后是Tag下存储的信息（解释）。如果没有为附注标签指定一条消息，Git会启动编辑器要求你输入信息</p>
+<p>你可以使用下列指令检查你的Tag的具体信息：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git show &lt;Tag&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="轻量标签"><a href="#轻量标签" class="headerlink" title="轻量标签"></a>轻量标签</h4><p>另一种给提交打标签的方式是使用轻量标签。轻量标签本质上是将提交校验和存储到一个文件中——没有保存其他信息（没有解释，你只是打了个标签Tag在那，因为那个Tag本身足够你明白那是啥了）</p>
+<p>使用方式如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git tag &lt;tag&gt;</span></span><br></pre></td></tr></table></figure>
+<p>简单来讲，就是什么参数都不用加了。轻量标签的目的正是“只提供一个Tag”</p>
+<h4 id="后期打标签"><a href="#后期打标签" class="headerlink" title="后期打标签"></a>后期打标签</h4><p>想要在提交之后的历史打标签，你需要在命令的末尾指定提交的校验和——Git的操作定向依赖各个文件的校验和（唯一性）(值得一提的是，可以部分校验和，前提是Git识别得到）。操作如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git tag -a &lt;tag&gt; &lt;Checksum&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="共享标签"><a href="#共享标签" class="headerlink" title="共享标签"></a>共享标签</h4><p>默认情况下，<code>git push</code>指令并不会传送标签到远程仓库服务器上。创建完标签之后你必须推送标签到共享服务器上。就像是共享远程分支一样——操作如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git push origin &lt;Tagname&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中“origin”是远程仓库某个分支的“名字”，也就是说这里是可以更换为已有分支的其他“名字”</p>
+<p>如果你想要一次性推送很多标签，请使用参数<code>--tags</code>（这个参数覆盖上文的<code>&lt;Tagname&gt;</code>），效果是把所有不在远程仓库服务器上的标签全部传送过去。下面是使用方式：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git push origin --tags</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h4><p>想删除本地仓库上的标签，可以使用下面的指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git tag -d &lt;Tagname&gt;</span></span><br></pre></td></tr></table></figure>
+<p>仅限于本地仓库（你的本地电脑），对于远程仓库，你得使用下面的指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git push origin --delete &lt;Tagname&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Git分支"><a href="#Git分支" class="headerlink" title="Git分支"></a>Git分支</h2><p>几乎所有的版本控制系统都以某种形式支持分支。使用分支意味着你可以把你的工作从开发主线上分离。很多版本控制系统在此是非常低效的——完全创建一个源代码目录的副本</p>
+<p>与许多的版本控制系统不同，Git的分支十分的轻量化，并且非常鼓励在工作流程频繁地使用分支和合并</p>
+<h3 id="分支简介"><a href="#分支简介" class="headerlink" title="分支简介"></a>分支简介</h3><p>Git保存的不是文件的差异和变化，而是一系列，不同时的快照（旧文件+更新（覆盖或独立）文件，最终形成的“平面”）</p>
+<p>进行提交操作时，Git会保存一个提交对象。我们很自然的想到——提交对象包含一个指向暂存内容的指针，以及作者名字和邮箱，以及提交时输入的信息以及指向它的父对象的指针</p>
+<p>当使用<code>git conmmit</code>进行提交操作时，Git会先计算每一个子目录的校验和，然后在Git仓库中这些校验和保存为树对象。随后，Git便会创建一个提交对象，它除了包含在上面保存的信息外，还包含指向这个树对象（根目录）的指针。如此，Git可以在需要时回溯之前保存的快照</p>
+<p>简单来讲，我们定义一个“提交对象”（Package），包裹着各种指针（指向儿子的，指向父子根目录的，还有作者名字和邮箱（<del>线下对线</del>）。每次提交一个“Version”创建一个“Version’s Package”，通过指针来定向开发哪个Version（其中内部指针等效于这个对象可能的和其他对象的关系）</p>
+<p>Git的分支，其实本质上仅仅是指向提交对象的可变指针。Git的默认分支名字叫做<code>master</code>。在多次提交之后，你其实已经有一个指向最后那个提交对象的<code>master</code>分支。<code>master</code>分支会在每次提交时自动向前移动。<code>master</code>分支会在每次提交的时候自动向前移动</p>
+<h4 id="分支创建"><a href="#分支创建" class="headerlink" title="分支创建"></a>分支创建</h4><p>Git的分支创建指令如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch &lt;Branch Name&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这会在当前所在提交对象上创建一个指针</p>
+<p>那么Git是如何知道当前的分支呢？“用户指针”（指向指针的指针，指针也是个对象，没毛病）——我们的Git有一个名为<code>HEAD</code>的特殊指针（用户指针），它指向当前所在的本地分支</p>
+<p>你可以使用如下指令查看各个分支当前的所指对象：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">log</span> --decorate</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="分支切换"><a href="#分支切换" class="headerlink" title="分支切换"></a>分支切换</h4><p>要切换到一个已存在的分支，使用下面的指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout &lt;OtherBranch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这时如果我们尝试在这个分支上（切换后的）进行修改提交，<code>HEAD</code>指向的分支会自动使分支前进，而旧有的分支“停留原地”（允许你的这个分支在旧版本开新分支进行并行开发）</p>
+<p>你可以简单的使用下面的指令查看分叉历史,它会输出你的提交历史，各个分支指向以及项目分支分叉情况：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">log</span> --decorate --graph --all</span></span><br></pre></td></tr></table></figure>
+
+<p>由于Git的分支实质上仅是包含所指对象校验和的文件，所以它的创建和销毁都异常高效——相当于往文件写入40字节的SHA-1值的字符串和1个换行符。我们鼓励使用Git的开发者去创建多个分支并多次以合并方式更新“版本线”</p>
+<h3 id="分支的新建与合并"><a href="#分支的新建与合并" class="headerlink" title="分支的新建与合并"></a>分支的新建与合并</h3><h4 id="分支新建"><a href="#分支新建" class="headerlink" title="分支新建"></a>分支新建</h4><p>鉴于我们上文已经有所阐述，关于分支的新建我们承接上文的方法：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch &lt;Branch Name&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果你需要新建一个分支的同时并且移动到那个新分支上，你可以引入参数<code>-b</code>，正如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout -b &lt;New Branch Name&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h4><p>对于分支的合并，我们可以使用<code>git merge</code>指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git merge &lt;Other Branch&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这时，我们会将“你所在的Branch”和“Other Branch”进行合并</p>
+<h4 id="遇到冲突时的分支合并"><a href="#遇到冲突时的分支合并" class="headerlink" title="遇到冲突时的分支合并"></a>遇到冲突时的分支合并</h4><p>有时候合并操作并不会如此顺利。比如说两个分支都在某文件的同一位置进行了修改，这时合并将会产生冲突。Git这时会将这个问题归类到冲突问题，需要用户进行手动处理，其他未冲突文件的合并依然自动完成</p>
+<p>在合并冲突后的任意时刻可以使用<code>git status</code>指令来查看那些因包含合并冲突而处于未合并状态的文件，用法如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git status</span></span><br></pre></td></tr></table></figure>
+<p>然后你会知道哪些地方出现了合并冲突，选择冲突的任意一方修改，然后把另一方改成你想要的修改一方，手动解决合并冲突。当冲突解决完之后，对每个文件使用<code>git add</code>标记冲突解决。一旦暂存了这些原有冲突文件，Git会将它们视为冲突已经解决</p>
+<p>在这里我们也明白Git的其中一个弊端：关于冲突分支的繁琐处理——你必须知道冲突发生在哪里，然后一个个地进行手动打开修改，最后再进行一次暂存。我们的Git在此使用的是一种简单但有保障（保守）方案——自动化是需要的，但是自动化的规则又是另一个问题了</p>
+<p>如果你对结果感到满意，并且确定之前有冲突的文件已经暂存了，这时你可以输入<code>git commit</code>来完成合并提交</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p><code>git branch</code>不只是可以创建与删除分支。如果不加任何参数来运行它，会得到当前分支的一个列表，用法如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch</span></span><br></pre></td></tr></table></figure>
+<p>与此同时，我们可以使用两个参数<code>--merged</code>和<code>--no-merged</code>来过滤这个列表中已经合并或尚未合并到当前分支的分支</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch --merged</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch --no-merged</span></span><br></pre></td></tr></table></figure>
+
+<p>Git在未合并工作上有保护机制，这时如果你尝试使用<code>git branch -d</code>删掉这个未合并完的子分支时会失败——这时我们得使用大写D（表示你明白删除掉这个Branch有什么风险）：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch -D &lt;Branch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分支开发工作流"><a href="#分支开发工作流" class="headerlink" title="分支开发工作流"></a>分支开发工作流</h3><p>现在你已经学会了新建和合并分支，你可以尝试怎么将分支体系整合进你的工作流里面呢？</p>
+<h4 id="长期分支"><a href="#长期分支" class="headerlink" title="长期分支"></a>长期分支</h4><p>因为Git使用简单的三方合并，所以就算在一段较长的时间内，反复把一个分支合并入另一个分支，也不是什么难事——就比如说我保留一条版本主线，然后版本总线分叉出不同分支，这些分支用于改善扩展功能，或是纯粹的优化；最终这些分支线可以很容易地合并到主版本线——就像是流水线那样，有些子工作可以专门地划分出一条分支（丢给其他人）进行工作，实现并行性；并在最终，拼在一起，成为主要产品</p>
+<p>而长期分支则是这些流水线的抽象线——所有人的分支工作的投射，也是我们期待的最终成品</p>
+<h4 id="主题分支"><a href="#主题分支" class="headerlink" title="主题分支"></a>主题分支</h4><p>主题分支对任何规模的项目都适用。主题分支是一种短期分支，它被用来实现单一性质或其相关工作。也就是我们的子分支</p>
+<p>记住，你的这些操作全部都存在本地。当你新建和合并分支的时候，所有这一切都只发生在你本地的Git版本库中</p>
+<h3 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h3><p>有些时候，对于参与者而言，并非是在同一台电脑上工作（也不可能是几个人用自己电脑，然后远程控制一个服务器平台进行开发）。而对于分支操作，我们也得考虑远程电脑的“分支”工作，让我们讨论一下远程分支</p>
+<p>如前文所说，Git定义了一个提交对象，还有一个指向这个提交对象的指针（还有用户指针，但在这里讨论是没有意义的），每个对象之间以一个指针表示版本关系。一切的讨论基于本地电脑</p>
+<p>现在我们引入远程电脑的存在——我们另开一类指针“远程指针”，同样是指向提交对象，但是这个指针以<code>&lt;Remote&gt;/&lt;Branch&gt;</code>命名，其中<code>&lt;Remote&gt;</code>是远程仓库的名字。这个远程指针不随着你的本地电脑上的工作进行更新——除非对方拉取了你的更新；如果对方也进行相对应的工作，这个远程分支会另开一条——但如果你不拉取对方的更新，这个远程分支依然在那里</p>
+<h4 id="拉取"><a href="#拉取" class="headerlink" title="拉取"></a>拉取</h4><p>如果要与远程仓库中拉取更新或者同步分支，使用如下指令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git fetch &lt;Remote&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个远程分支是可以无限套环（叠叠乐）的，也就是指针的指针的指针的Etc</p>
+<p>我们可以事先创建好（还未拉取的）远程仓库分支，如下操作：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git remote add &lt;Remote Name&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样，你就创建了一个远程仓库的指针，你得进行<code>git fetch</code>对远程仓库进行拉取，否则你只有一个本地远程指针放在那里。</p>
+<h4 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h4><p>当你想公开分享一个分支时，需要将其推送到有写入权限的远程仓库上。本地的分支并不会自动与远程仓库同步——你必须显式地推送想要分享的分支。如下操作：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git push &lt;Remote&gt; &lt;Branch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>下一次其他协作者从服务器上抓取数据时，他们会在本地生成你分享的远程分支。特别注意的是，他们抓取的这个新分支只有一个远程指针，不会生成一份可编辑的副本。</p>
+<p>可以运行<code>git merge &lt;RemoteBranch&gt;</code>将这些工作合并到当前分支。你可以创建自己的专门的本地分支，映射到这些远程分支上：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout -b &lt;LocalBranch&gt; &lt;RemoteBranch&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这会给你一个用于工作的本地分支，起点位于<code>&lt;RemoteBranch&gt;</code></p>
+<h4 id="跟踪分支"><a href="#跟踪分支" class="headerlink" title="跟踪分支"></a>跟踪分支</h4><p>从一个远程分支检出一个本地分支会自动创建所谓的“跟踪分支”（它跟踪的远程分支被称为上游分支）。跟踪分支是与远程分支有直接关系的本地分支。如果在一个跟踪分支上输入<code>git pull</code>，Git能自动地识别去哪个服务器上抓取，合并到哪个分支</p>
+<p>用法如同上文所述，这非常常用：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout -b &lt;LocalBranch&gt; &lt;RemoteBranch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>设置已有的本地分支跟踪一个刚刚拉取下来的远程分支，你可以在任何时刻使用<code>-u</code>或<code>--set-upstream-to</code>参数运行<code>git branch</code>来显式地设置：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch -u &lt;RemoteBranch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你想要查看设置的所有跟踪分支，可以使用<code>git branch</code>的<code>-vv</code>参数：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git branch -vv</span></span><br></pre></td></tr></table></figure>
+<p>这会将所有的本地分支列出来，并且显示跟踪情况（还有更多的信息）</p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>假如你已经通过远程分支做完所有的工作——你可以运行带有<code>--delete</code>参数的<code>git push</code>指令来删除一个远程分支，操作如下：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git push &lt;RemoteBase&gt; --delete &lt;RemoteBranch&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="变基"><a href="#变基" class="headerlink" title="变基"></a>变基</h3><p>在Git中整合来自不同的分支的修改主要是：<code>merge</code>和<code>rebase</code></p>
+<p>之前介绍过，整合分支最容易的方法是<code>merge</code>指令。它会把两个分支的最新快照以及两者最近的共同祖先进行三方合并，形成一个新快照（并提交）</p>
+<p>而变基，<code>rebase</code>是什么？有些时候，我的一个子分支完全是另一个分支（主要分支）的补丁——我并不需要关注这个子分支后续怎样，它只是个临时更新</p>
+<p>如果说<code>merge</code>是祖先（根节点）以及它的所有共同子分支（Branch）的共同结合更新，形成新快照；那么<code>rebase</code>则是某一个子分支是主要更新，其他分叉子分支是基于这个子分支的“临时工作”，最终我们使用<code>rebase</code>将所有的其他子分支整合进入那个主要子分支</p>
+<p>我们显然可以通过改变操作行为而实现<code>merge</code>和<code>rebase</code>等效的操作结果。但是变基能使提交历史更加整洁——我们看到的是一条线性的更新线，而不是单独使用<code>merge</code>产生的多分叉更新”抽象线”</p>
+<p>而变基的使用方法，你需要先切换到你需要被<code>rebase</code>的Branch：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git rebase &lt;MasterBranch&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样，你的所在Branch会与你的“MasterBranch”整合成一块了</p>
+<p>如果你的分叉分支很多，你可以使用<code>--onto</code>参数，实现多分叉分支的“映射变基”（也就是假设你某个分支的命名对象与无穷代父分支共享，它更像是把这条线拉出来线性化，然后映射到第一代父亲分支上进行<code>rebase</code>）。操作是这样的：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git rebase --onto &lt;1stBranch&gt; &lt;2ndBranch&gt; ... &lt;N Branch&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个指令会寻找这个N代分支（以及与N-1到”$目标数 - 1$“的分支的共享命名对象）拉出来成为一条线，然后<code>rebase</code>到目标分支</p>
+<p>不过，<code>rebase</code>会保留指向变基后的命名对象的指针，如果你不需要这个Branch了记得删掉这个指针</p>
+<p>以上针对本地电脑上的工作。如果是多人（多电脑）协同开发，因为工作任务并非是同时根据某个人工作而全员更新（也就是行动流，但是行动流的发起人是不同的）——这就可能导致某个人进行的变基操作，因为行动流不是最晚的而导致下一位人士的更新行动，让变基操作在协同开发上“失效了”（变基整合的命名单位又跑回来了），产生了协同行为的冲突</p>
+<p>尽管Git提供了<code>git pull --rebase</code>的针对性（这个rebase冲突的）方案，但类似问题是无限的——这是个工作协同问题，我们必须事先规定好协同工作时的一些规矩（最好是进行一定的抽象分析，然后制定规范——就比如说我刚刚抽象的“行动流”）</p>
+<p>最后，关于变基和合并的最优选择解是没有的，根据自己需要选取合适方案即可</p>
+<h2 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍"></a>参考书籍</h2><ul>
+<li>ProGit中文版——<a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">https://git-scm.com/book/zh/v2</a></li>
+</ul>
+</a>
+    </div>
+</div>
+    </div>
+    
+    <div class="Foot_container">
+        <!-- 尾部 -->
+        <!-- 引入-公共元素-尾部声明 -->
+<div class="Foot_Text">
+    <p>
+    Copyright©Mish233| 2024 ~ 2025 |Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a>
+    </p>
+    <p>
+    Using theme <a href="#">Mish233</a> | <span id="Current_Time">Loading</span>
+    </p>
+</div>
+
+    </div>
+    <!-- 后面是JS加载器载入的JS -->
+</body>
+</html>

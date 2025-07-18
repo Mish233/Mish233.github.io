@@ -114,10 +114,16 @@
     width:100%;
 }
 .Body_Portrait_TagsNavigator_list{
-    width:100%;
-    padding:0;
-    list-style-type: none;
+    text-align:center;
+    padding:10%;
+    border:5%;
+    cursor: pointer;
+}
+.Body_Portrait_TagsNavigator_list a{
     text-decoration: none;
+}
+.Body_Portrait_TagsNavigator_list:hover{
+    background-color:aquamarine;
 }
 .Body_Portrait_TagsNavigator_list_li{
     text-align:center;
